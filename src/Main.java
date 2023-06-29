@@ -2,17 +2,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BankAccount b1 = new BankAccount(2000.50f, 220202, "Optimus Bank");
-        BankAccount b2 = new BankAccount(1050.00f, 110101, "Access Bank");
-        BankAccount b3 = new BankAccount(20000.00f, 440404, "Jaiz Bank");
 
-        Student s1 = new Student("Karan", 1, b1);
+        Student s1 = new Student("Karan", 1);
         System.out.println(s1.getDetails());
 
-        ResearchStudent s2 = new ResearchStudent("Ade", 2, b2, "Mathematics");
+        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
         System.out.println(s2.getDetails());
 
-        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", b3, "Mr. Onobote", "Discrete Mathematics");
+        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
         System.out.println(s3.getDetails());
     }
 }
@@ -22,12 +19,10 @@ class Student {
     private final String name;
     private final int year;
 
-    private final BankAccount bankAccount;
 
-    public Student(String name, int year, BankAccount bankAccount) {
+    public Student(String name, int year) {
         this.name = name;
         this.year = year;
-        this.bankAccount = bankAccount;
     }
 
     public String getDetails() {
@@ -43,11 +38,16 @@ class Student {
 class ResearchStudent extends Student {
     private final String researchArea;
 
-    public ResearchStudent(String name, int year, BankAccount bankAccount,
+    public ResearchStudent(String name, int year,
                            String researchArea) {
-        super(name, year, bankAccount);
+        super(name, year);
         this.researchArea = researchArea;
     }
+
+    public String getDetails() {
+        return super.getDetails() + '\n' + "Research Area : " + this.researchArea;
+    }
+
 }
 
 class phdStudent extends ResearchStudent {
@@ -55,12 +55,15 @@ class phdStudent extends ResearchStudent {
     private final String thesisTitle;
 
     public phdStudent(String name, int year, String researchArea,
-                      BankAccount bankAccount,
+
                       String supervisor, String thesisTitle) {
-        super(name, year, bankAccount, researchArea);
+        super(name, year, researchArea);
         this.supervisor = supervisor;
         this.thesisTitle = thesisTitle;
+    }
 
+    public String getDetails() {
+        return super.getDetails() + '\n' + "Supervisor : " + this.supervisor + '\n' + "Thesis : " + this.thesisTitle;
     }
 }
 
