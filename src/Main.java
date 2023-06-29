@@ -5,21 +5,21 @@ public class Main {
 
         Student s1 = new Student("Karan", 1);
         System.out.println(s1.getDetails());
-        System.out.println(s1.computeFees(10));
-        System.out.println(s1.computeFees());
+//        System.out.println(s1.computeFees(10));
+//        System.out.println(s1.computeFees());
 
-//        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
-//        System.out.println(s2.getDetails());
-//
-//        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
-//        System.out.println(s3.getDetails());
+        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
+        System.out.println(s2.getDetails());
+
+        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
+        System.out.println(s3.getDetails());
     }
 }
 
 class Student {
     private static final int annualFees = 10000;
-    private final String name;
-    private final int year;
+    protected String name;
+    protected int year;
 
 
     public Student(String name, int year) {
@@ -51,7 +51,7 @@ class ResearchStudent extends Student {
     }
 
     public String getDetails() {
-        return super.getDetails() + '\n' + "Research Area : " + this.researchArea;
+        return this.name + " is a year " + this.year + " research student in " + this.researchArea;
     }
 
 }
@@ -66,10 +66,6 @@ class phdStudent extends ResearchStudent {
         super(name, year, researchArea);
         this.supervisor = supervisor;
         this.thesisTitle = thesisTitle;
-    }
-
-    public String getDetails() {
-        return super.getDetails() + '\n' + "Supervisor : " + this.supervisor + '\n' + "Thesis : " + this.thesisTitle;
     }
 }
 
