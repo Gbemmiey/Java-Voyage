@@ -8,10 +8,10 @@ public class Main {
 //        System.out.println(s1.computeFees(10));
 //        System.out.println(s1.computeFees());
 
-        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
+        Student s2 = new ResearchStudent("Ade", 2, "Mathematics");
         System.out.println(s2.getDetails());
 
-        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
+        Student s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
         System.out.println(s3.getDetails());
     }
 }
