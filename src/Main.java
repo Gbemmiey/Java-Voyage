@@ -29,26 +29,14 @@ class Student {
 
 }
 
-class ResearchStudent {
-    private static final int annualFees = 10000;
-    private final String name;
-    private final int year;
+class ResearchStudent extends Student {
+    private static final int annualFees = 20000;
     private final String researchArea;
 
+
     public ResearchStudent(String name, int year, String researchArea) {
-        this.name = name;
-        this.year = year;
+        super(name, year);
         this.researchArea = researchArea;
-    }
-
-    public String getDetails() {
-        return "Name : " + this.name + '\n'
-                + "Fees : " + computeFees()
-                + '\n' + "Area : " + this.researchArea;
-    }
-
-    public float computeFees() {
-        return annualFees * this.year;
     }
 
 }
