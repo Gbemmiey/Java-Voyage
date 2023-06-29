@@ -5,12 +5,14 @@ public class Main {
 
         Student s1 = new Student("Karan", 1);
         System.out.println(s1.getDetails());
+        System.out.println(s1.computeFees(10));
+        System.out.println(s1.computeFees());
 
-        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
-        System.out.println(s2.getDetails());
-
-        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
-        System.out.println(s3.getDetails());
+//        ResearchStudent s2 = new ResearchStudent("Ade", 2, "Mathematics");
+//        System.out.println(s2.getDetails());
+//
+//        phdStudent s3 = new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics");
+//        System.out.println(s3.getDetails());
     }
 }
 
@@ -31,6 +33,10 @@ class Student {
 
     public float computeFees() {
         return annualFees * this.year;
+    }
+
+    public float computeFees(int ratio) {
+        return annualFees * this.year * ratio;
     }
 
 }
