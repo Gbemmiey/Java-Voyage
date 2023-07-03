@@ -1,10 +1,10 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<Student> studentList = new ArrayList<Student>();
+        LinkedList<Student> studentList = new LinkedList<Student>();
 
         studentList.add(new Student("Karan", 1));
 
@@ -14,15 +14,12 @@ public class Main {
         studentList.add(new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics"));
         PrintDetails(studentList);
 
-        System.out.println("\n \n \n");
+        studentList.removeLast();
 
-        studentList.remove(2);
-        PrintDetails(studentList);
-        
 
     }
 
-    public static void PrintDetails(ArrayList<Student> students) {
+    public static void PrintDetails(LinkedList<Student> students) {
         for (Student s : students) {
             System.out.println(s.getDetails());
             System.out.println(s.computeFees());
