@@ -14,17 +14,17 @@ public class Main {
         studentList.add(0, new ResearchStudent("Ade", 2, "Mathematics"));
 
         studentList.add(new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics"));
-        PrintDetails(studentList);
+        iterateFwd(studentList);
 
     }
 
-    public static void PrintDetails(List<Student> students) {
+    public static void iterateFwd(List<Student> students) {
 
         ListIterator it = students.listIterator();
-        
-        for (Student s : students) {
+
+        while (it.hasNext()) {
+            Student s = (Student) it.next();
             System.out.println(s.getDetails());
-            System.out.println(s.computeFees());
         }
     }
 }
