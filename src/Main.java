@@ -15,8 +15,7 @@ public class Main {
 
         studentList.add(new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics"));
 
-        iterateFwd(studentList);
-        iterateBkwd(studentList);
+        iterateFwdBkwd(studentList);
 
     }
 
@@ -30,10 +29,17 @@ public class Main {
         }
     }
 
-    public static void iterateBkwd(List<Student> students) {
+    public static void iterateFwdBkwd(List<Student> students) {
 
-        ListIterator it = students.listIterator(students.size());
+        ListIterator it = students.listIterator();
 
+        System.out.println("Printing Forwards");
+
+        while (it.hasNext()) {
+            Student s = (Student) it.next();
+            System.out.println(s.getDetails());
+        }
+        System.out.println("Printing Backwards");
         while (it.hasPrevious()) {
             Student s = (Student) it.previous();
             System.out.println(s.getDetails());
