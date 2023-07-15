@@ -1,3 +1,5 @@
+package OOP_BASICS;
+
 public class Student implements Person {
     protected static final int annualFees = 10000;
     protected String name;

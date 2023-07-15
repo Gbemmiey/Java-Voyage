@@ -1,3 +1,5 @@
+package OOP_BASICS;
+
 public class phdStudent extends ResearchStudent {
     private final String supervisor;
     private final String thesisTitle;

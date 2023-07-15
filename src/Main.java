@@ -1,4 +1,7 @@
-import java.util.LinkedList;
+import Algorithms.Fibonacci.DummyFibonacci;
+import Algorithms.Fibonacci.TrialFibonacci;
+import OOP_BASICS.Student;
+
 import java.util.List;
 import java.util.ListIterator;
 
@@ -6,16 +9,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        List<Student> studentList = new LinkedList<Student>();
-
-        studentList.add(new Student("Karan", 1));
+//        List<Student> studentList = new LinkedList<Student>();
+//
+//        studentList.add(new Student("Karan", 1));
 
         // Add to ArrayList with Index
-        studentList.add(0, new ResearchStudent("Ade", 2, "Mathematics"));
+//        studentList.add(0, new ResearchStudent("Ade", 2, "Mathematics"));
+//
+//        studentList.add(new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics"));
+//
+//        iterateFwdBkwd(studentList);
 
-        studentList.add(new phdStudent("Kunle", 4, "Mathematics", "Mr. Onobote", "Discrete Mathematics"));
+        System.out.println(TrialFibonacci.getFibonacci(40));
+        System.out.println("\n\n");
 
-        iterateFwdBkwd(studentList);
+        System.out.println(DummyFibonacci.getFib(40));
 
     }
 

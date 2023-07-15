@@ -1,3 +1,5 @@
+package OOP_BASICS;
+
 public class ResearchStudent extends Student {
     private final String researchArea;
 
