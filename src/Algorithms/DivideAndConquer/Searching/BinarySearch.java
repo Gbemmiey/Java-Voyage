@@ -1,4 +1,4 @@
-package Algorithms.DivideAndConquer;
+package Algorithms.DivideAndConquer.Searching;
 
 public class BinarySearch {
     public static int getSearch(int[] input, int searchTerm) {
@@ -7,11 +7,11 @@ public class BinarySearch {
         int start = input[0];
         int end = input[N - 1];
         int mid = 0;
+        int output = 0;
 
         if (searchTerm > input[N - 1] || searchTerm < input[0]) {
-            return -1;
+            output = -1;
         } else {
-            int output = 0;
             while (mid != searchTerm) {
                 System.out.println("Start: " + start + "\t" + mid + "\t End: " + end);
                 mid = (start + end) / 2;
@@ -25,8 +25,8 @@ public class BinarySearch {
                     break;
                 }
             }
-            return output;
         }
+        return output;
     }
 
 }
