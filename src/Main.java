@@ -1,6 +1,7 @@
-import Algorithms.DivideAndConquer.BinarySearch;
+import Algorithms.DivideAndConquer.Sorting.MergeSort;
 import OOP_BASICS.Student;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -24,11 +25,12 @@ public class Main {
 //
 //        System.out.println(DummyFibonacci.getFib(40));
 
-        int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
 
-        System.out.println(BinarySearch.getSearch(input, 3));
-        System.out.println(BinarySearch.getSearch(input, 56));
-        System.out.println(BinarySearch.getSearch(input, -20));
+//        System.out.println(BinarySearch.getSearch(input, 3));
+        int[] input = {1, 20, 31, 4, 50, 6, 7, 81, 9, 10, 2000, 102, 11, 12, 13, 142, 15, 163, 17, 108, 19, 20};
+        // int[] input = {1, 0, 21, 34, 4, 2, 100, 24, 67, 1, 0};
+        System.out.println(Arrays.toString(MergeSort.sort(input)));
+
 
     }
 
