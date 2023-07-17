@@ -1,5 +1,4 @@
-import Algorithms.Fibonacci.DummyFibonacci;
-import Algorithms.Fibonacci.TrialFibonacci;
+import Algorithms.DivideAndConquer.BinarySearch;
 import OOP_BASICS.Student;
 
 import java.util.List;
@@ -20,10 +19,16 @@ public class Main {
 //
 //        iterateFwdBkwd(studentList);
 
-        System.out.println(TrialFibonacci.getFibonacci(40));
-        System.out.println("\n\n");
+//        System.out.println(TrialFibonacci.getFibonacci(40));
+//        System.out.println("\n\n");
+//
+//        System.out.println(DummyFibonacci.getFib(40));
 
-        System.out.println(DummyFibonacci.getFib(40));
+        int[] input = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
+
+        System.out.println(BinarySearch.getSearch(input, 3));
+        System.out.println(BinarySearch.getSearch(input, 56));
+        System.out.println(BinarySearch.getSearch(input, -20));
 
     }
 
