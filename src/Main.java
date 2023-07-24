@@ -1,4 +1,4 @@
-import Algorithms.DivideAndConquer.Sorting.MergeSort;
+import Algorithms.DivideAndConquer.Sorting.QuickSort;
 import OOP_BASICS.Student;
 
 import java.util.Arrays;
@@ -29,7 +29,9 @@ public class Main {
 //        System.out.println(BinarySearch.getSearch(input, 3));
         int[] input = {1, 20, 31, 4, 50, 6, 7, 81, 9, 10, 2000, 102, 11, 12, 13, 142, 15, 163, 17, 108, 19, 20};
         // int[] input = {1, 0, 21, 34, 4, 2, 100, 24, 67, 1, 0};
-        System.out.println(Arrays.toString(MergeSort.sort(input)));
+//        System.out.println(Arrays.toString(MergeSort.sort(input)));
+
+        System.out.println(Arrays.toString(QuickSort.sort(input)));
 
 
     }
